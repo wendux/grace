@@ -1,0 +1,11 @@
+{
+  "name": "grace",
+  "version": "1.0.0",
+  "description": "A helper for wechat Mini Program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wendux",
+  "license": "MIT"
+}
