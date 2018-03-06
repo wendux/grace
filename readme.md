@@ -166,7 +166,7 @@ createPage({
 对于已经创建的实例，grace 不能动态添加根级别的响应式属性。但是，可以使用 `$data.$set(object, key, value)` 方法向嵌套对象添加响应式属性。例如：
 
 ```javascript
-this.$data.$set($data, 'b', 2)
+this.$data.$set(this.$data, 'b', 2)
 ```
 
 
