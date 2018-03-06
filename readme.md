@@ -20,31 +20,31 @@
 ```javascript
 import createPage from "grace/index.js"
 createPage({
-  data:{
-    userInfo:{},
-    canIUse:true
-  }
-  onLoad(){
-   //直接通过$data赋值更新数据
-   this.$data.canIUse=false
-   //通过$http发起网络请求
-   this.$http.post("http://www.dtworkroom.com/doris/1/2.0.0/test",{xx:7}).then((d)=>{
-      	console.log(d)
-	}).catch(err=>{
-  		console.log(err.status,err.message)
-	})
+  data: {
+    userInfo: {},
+    canIUse: true
+  },
+  onLoad() {
+    //直接通过$data赋值更新数据
+    this.$data.canIUse = false
+    //通过$http发起网络请求
+    this.$http.post("http://www.dtworkroom.com/doris/1/2.0.0/test", {xx: 7}).then((d) => {
+      console.log(d)
+    }).catch(err => {
+      console.log(err.status, err.message)
+    })
     //全局事件总线-监听事件
-	this.$bus.$on("enventName",(data)=>{
-  	  console.log(data)
-	})
+    this.$bus.$on("enventName", (data) => {
+      console.log(data)
+    })
     //返回上一页，并传递数据
-    this.$goBack({retValue:"8"})
-   }, 
-   //跨页面传值  
-   $onBackData(data){
-     //接收页面返回的数据，
-   }  
-  ...         
+    this.$goBack({retValue: "8"})
+  },
+  //跨页面传值  
+  $onBackData(data) {
+    //接收页面返回的数据，
+  }
+  ...
 })
 ```
 
