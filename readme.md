@@ -50,6 +50,10 @@ createPage({
 
 
 
+**注意：Grace 所有方法和属性命名都以“$”开始**。
+
+
+
 ## 数据响应式
 
 微信小程序中数据发生变化后都要通过setData显式更新如：
@@ -201,11 +205,11 @@ Grace通过Promise封装了wx.request， 并支持拦截器、请求配置等：
 1. Restful API
 
    ```javascript
-   fly.get(url, [data], [options])
-   fly.post(url, data, [options])
-   fly.put(url, data, [options])
-   fly.delete(url,[data],[options])
-   fly.patch(url,[data],[options])
+   $http.get(url, [data], [options])
+   $http.post(url, data, [options])
+   $http.put(url, data, [options])
+   $http.delete(url,[data],[options])
+   $http.patch(url,[data],[options])
    ```
 
 2. 多个并发请求
@@ -219,7 +223,7 @@ Grace通过Promise封装了wx.request， 并支持拦截器、请求配置等：
      return this.$http.get('/user/133/projects');
    }
 
-   fly.all([getUserRecords(), getUserProjects()])
+   this.$http.all([getUserRecords(), getUserProjects()])
      .then(this.$http.spread(function (records, projects) {
        // Both requests are now complete
      }))
