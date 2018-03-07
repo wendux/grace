@@ -4,11 +4,13 @@
 
 ## 特点
 
-1. 支持和Vue一样优雅的数据响应式
-2. 支持数据自动更新、更改缓存、批量更新
-3. 强大的网络功能
-4. 支持全局事件总线
-5. 支持跨页面传值
+1. 轻量、小巧、上手简单
+2. 支持和Vue一样优雅的数据响应式
+3. 支持数据自动更新、更改缓存、批量更新
+4. 强大的网络功能
+5. 支持全局事件总线
+6. 支持跨页面传值
+7. 支持mixins
 
 
 
@@ -258,13 +260,13 @@ Grace通过Promise封装了wx.request， 并支持拦截器、请求配置等：
    )
    ```
 
-Grace使用的http请求库是 [FLY](https://github.com/wendux/fly) , `$http`是 [FLY](https://github.com/wendux/fly)的一个实例，详情可以参照其官网，如果您想创建新的  [FLY](https://github.com/wendux/fly) 示例：
+Grace使用的http请求库是 [FLY](https://github.com/wendux/fly) , `$http`是 [FLY](https://github.com/wendux/fly)的一个实例，详情可以参照其官网，如果您想创建新的  [FLY](https://github.com/wendux/fly) 实例：
 
 ```javascript
 var newHttp=this.$creatHttpClient();
 ```
 
-
+注**意：grace创建页面时，每个页面的`$http`都是一个新的[FLY](https://github.com/wendux/fly) 实例，所以对`this.$http`的配置，只会在该页面中生效，所以如果你要配置全局的拦截器、请求基地址、超时时间等，请参照下面的mixin部分示例。**
 
 ## 事件总线
 
@@ -345,3 +347,95 @@ createPage({
 关闭当前页面，返回上一页面或多级页面，如果存在`data`, 则会调用返回到的页面的`$onBackData`回调，若`data`不存在，则不会回调`$onBackData`.
 
 `delta`  意义同 `wx.navigateBack`参数的delta, 表示回退的页面数，默认为1（上一页），如果如果 delta 大于现有页面数，则返回到首页。
+
+
+
+## mixin
+
+混入 (mixins) 是一种分发页面（Page）可复用功能的非常灵活的方式。简而言之，他可以在小程序创建页面时，混合页面选项，可以实现给所有页面添加一些钩子的功能，如果还不理解，不要紧，下面来看一个例子：
+
+由于grace在创建页面时，每个页面的` $http` 都是一个新的实例，如果我们要给设置一个全局的请求基地址和超时时间，那么一般的做法，我们只能在每个页面的`onLoad` 回调里面去设置，显然这很麻烦，但是现在有了`mixin`, 我们只需要这么做：
+
+1. 创建一个help.js文件
+
+   ```javascript
+   import createPage from "../grace/index.js"
+   import mixin from "../grace/mixin.js"
+   export default function(ob){
+     mixin(ob,{
+       onLoad(){
+         //页面调用onLoad时先配置当前页面$http实例
+         this.$http.config.baseURL = 'http://www.dtworkroom.com/doris/1/2.0.0/'
+         this.$http.config.timeout = 5000;
+         //设置拦截器
+         this.$http.interceptors.request.use((config, promise) => {
+            //输出请求体
+            console.log("interceptors.request",config.body);
+         });
+       },
+       onShow(){
+        //页面调用onShow时打印出当前页面id 
+        console.log("show, pageID:"+this.$id)
+     	}
+     })
+     //创建页面
+     createPage(ob)
+   }
+   ```
+
+2. 在创建Page时引入help.js
+
+   ```javascript
+   import createPage from "../../utils/help.js"
+   createPage({
+     data:{},
+     onLoad(){
+       //$http基地址、超时、拦截器已设置
+       this.$http.post("test",{xx:7}).then((d)=>{
+         console.log(d);
+       }).catch(err=>{
+         console.log(err.status,err.message)
+       })
+     },
+     ...
+   })
+   ```
+
+这样一来，相当于给所有的Page添加了`onLoad`、`onShow` 预处理。
+
+可以看到，mixin通过混入页面创建参数给页面添加统一的预处理功能，相当于添加了页面钩子。
+
+### 选项合并
+
+当页面构建对象和混入对象含有同名选项时，这些选项将以恰当的方式混合。
+
+1. 数据对象在内部会进行浅合并 (一层属性深度)，在和页面构建数对象发生冲突时以页面构建数对象数据优先。
+
+2. 同名钩子函数将混合为一个数组，因此都将被调用。另外，混入对象的钩子将在页面自身钩子**之前**调用。
+
+   ```javascript
+    
+   mixin(ob,{
+       onShow(){
+        console.log("mixin onShow")
+       }
+    });
+
+   ...
+
+   createPage({
+      onShow(){
+        console.log("page onShow")
+       }
+    })
+
+   //页面显示时会输出： 
+   > mixin onShow
+   > page onShow
+   ```
+
+   ​
+
+## 和wepy比较
+
+grace比wepy轻量 ，wepy是一个更接近vue 全功能的框架，需要wepy-cli、babel 等一系列工具的支持，上手比较复杂，但功能全，适合大项目，而grace是一个小巧纯粹的JavaScript库，支持vue的部分功能，主要特点是小巧，上手简单，适合功能不太复杂的项目。由于小程序的定位本身定位就是“触手可得，用完即走”，微信官方限制小程序包的最大上线是4M，小程序本身的定位就是轻量级，所以功能一般都不会太复杂，所以grace正是因为这个原因而存在的。
