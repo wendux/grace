@@ -1,3 +1,4 @@
+//由于微信小程序目前不支持ES6 Proxy, 故此文件目前没有使用，只做研究学习之用
 export default function (context) {
   var cache = false;
   function proxy(ob) {

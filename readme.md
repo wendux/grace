@@ -1,6 +1,6 @@
 # Grace
 
-> 微信小程序开发必备神器，让你的小程序达到Vue一样的开发体验
+> 一个精巧、易用的微信小程序开发辅助库
 
 ## 特点
 
@@ -266,7 +266,7 @@ Grace使用的http请求库是 [FLY](https://github.com/wendux/fly) , `$http`是
 var newHttp=this.$creatHttpClient();
 ```
 
-注**意：grace创建页面时，每个页面的`$http`都是一个新的[FLY](https://github.com/wendux/fly) 实例，所以对`this.$http`的配置，只会在该页面中生效，所以如果你要配置全局的拦截器、请求基地址、超时时间等，请参照下面的mixin部分示例。**
+注**意：grace创建页面时，每个页面的`$http`都是一个新的[FLY](https://github.com/wendux/fly) 实例，所以对`this.$http`的配置，只会在该页面中生效，所以如果你想要配置全局的拦截器、请求基地址、超时时间等，请参照下面的mixin部分示例。**
 
 ## 事件总线
 
