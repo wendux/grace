@@ -20,7 +20,7 @@
 
 ## 使用
 
-1. 将 https://github.com/wendux/grace  工程中src目录拷贝到小程序根目录下的grace目录
+1. 将 https://github.com/wendux/grace  工程中src目录中所有文件拷贝到小程序根目录下的grace目录
 2. 创建页面时用`grace.page` 替换 `Page` 即可。
 
 ```javascript
@@ -287,7 +287,7 @@ Grace通过Promise封装了wx.request， 并支持拦截器、请求配置等：
 Grace使用的http请求库是 [FLY](https://github.com/wendux/fly) , `$http`是 [FLY](https://github.com/wendux/fly)的一个实例，详情可以参照其官网，如果您想创建新的  [FLY](https://github.com/wendux/fly) 实例：
 
 ```javascript
-var newHttp=grace.creatHttpClient();
+var newHttp=grace.createHttpClient();
 ```
 
 注意：grace创建页面时，所有页面的`$http`都是同一个[FLY](https://github.com/wendux/fly) 实例，所以对`this.$http`的配置，会在全局生效，所以如果你想要配置全局的拦截器、请求基地址、超时时间等可以创建一个帮助文件，然后页面引入这个文件即可：

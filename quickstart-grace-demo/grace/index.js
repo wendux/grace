@@ -36,10 +36,6 @@ function component(ob) {
   Component(ob);
 }
 
-function creatHttpClient(){
-  return new Http;
-}
-
  function page(ob) {
   var backEvent = "_back-data";
   mixin(ob, {
@@ -95,7 +91,7 @@ export default {
   mixin,
   bus:$bus,
   http:$http,
-  creatHttpClient() {
+  createHttpClient() {
     return new Http;
   }
 }
