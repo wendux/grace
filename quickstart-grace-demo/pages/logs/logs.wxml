@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <button size='mini' type='primary' bindtap="onBack">返回数据</button> 
+  <button size='mini' bindtap="onEmit" style='margin-top:10px'>触发事件</button> 
+  <block wx:for="{{logs}}" wx:for-item="log" wx:key="index">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>

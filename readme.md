@@ -13,15 +13,19 @@
 7. 支持mixins
 
 
+## Demo
+
+示例工程在 “quickstart-grace-demo”, 用微信小程序开发工具打开即可。
+
 
 ## 使用
 
-1. 下载：https://github.com/wendux/grace 到本地 grace目录
-2. 创建页面时用Grace 替换 `Page` 即可。
+1. 将 https://github.com/wendux/grace  工程中src目录拷贝到小程序根目录下的grace目录
+2. 创建页面时用`grace.page` 替换 `Page` 即可。
 
 ```javascript
-import createPage from "grace/index.js"
-createPage({
+import grace from "../../grace/index.js"
+grace.page({
   data: {
     userInfo: {},
     canIUse: true
@@ -52,7 +56,27 @@ createPage({
 
 
 
-**注意：Grace 所有方法和属性命名都以“$”开始**。
+如果是注册组件（component）的话, 只需用 `grace.component` 替换 `Component` 构造器即可：
+
+```javascript
+// grace.component 替换 Component
+grace.component({
+  properties: {
+  },
+  data: {
+     text:"我是自定义组件",
+     times:1
+  },
+  methods: {
+    onTap(){
+      //赋值更新
+      this.$data.text="自定义组件点击 +"+this.$data.times++
+    }
+  }
+}
+```
+
+**注意：Grace 注入到实例中的所有方法和属性命名都以“$”开始。**
 
 
 
@@ -150,7 +174,7 @@ this.$data.items.splice(newLength)
 还是由于 JavaScript 的限制，**grace 不能检测对象属性的添加或删除**：
 
 ```javascript
-createPage({
+grace.page({
   data: {
     a: 1
   }
@@ -263,10 +287,23 @@ Grace通过Promise封装了wx.request， 并支持拦截器、请求配置等：
 Grace使用的http请求库是 [FLY](https://github.com/wendux/fly) , `$http`是 [FLY](https://github.com/wendux/fly)的一个实例，详情可以参照其官网，如果您想创建新的  [FLY](https://github.com/wendux/fly) 实例：
 
 ```javascript
-var newHttp=this.$creatHttpClient();
+var newHttp=grace.creatHttpClient();
 ```
 
-注**意：grace创建页面时，每个页面的`$http`都是一个新的[FLY](https://github.com/wendux/fly) 实例，所以对`this.$http`的配置，只会在该页面中生效，所以如果你想要配置全局的拦截器、请求基地址、超时时间等，请参照下面的mixin部分示例。**
+注意：grace创建页面时，所有页面的`$http`都是同一个[FLY](https://github.com/wendux/fly) 实例，所以对`this.$http`的配置，会在全局生效，所以如果你想要配置全局的拦截器、请求基地址、超时时间等可以创建一个帮助文件，然后页面引入这个文件即可：
+
+```javascript
+import grace from "../grace/index.js"
+grace.http.config.baseURL = 'http://www.dtworkroom.com/doris/1/2.0.0/'
+grace.http.config.timeout = 5000;
+grace.http.interceptors.request.use((config, promise) => {
+    //拦截器逻辑
+    //console.log(config.body);
+});
+export default grace;
+```
+
+
 
 ## 事件总线
 
@@ -318,7 +355,7 @@ wx.navigateTo({
 
 ```javascript
 
-createPage({
+grace.page({
   data:{}
   $onBackData(data){
    //接收页面返回的数据，
@@ -330,7 +367,7 @@ createPage({
 上面的页面我们记为A, 假设你打开了一个新页面B, 你需要在B中选择一些信息后回传给A，那么你在B中应该：
 
 ```javascript
-createPage({
+grace.page({
   data: {},
   bindViewTap(){
     //返回上一个页面，并回传一些数据
@@ -354,51 +391,41 @@ createPage({
 
 混入 (mixins) 是一种分发页面（Page）可复用功能的非常灵活的方式。简而言之，他可以在小程序创建页面时，混合页面选项，可以实现给所有页面添加一些钩子的功能，如果还不理解，不要紧，下面来看一个例子：
 
-由于grace在创建页面时，每个页面的` $http` 都是一个新的实例，如果我们要给设置一个全局的请求基地址和超时时间，那么一般的做法，我们只能在每个页面的`onLoad` 回调里面去设置，显然这很麻烦，但是现在有了`mixin`, 我们只需要这么做：
+实现：在任何页面调用`onLoad`、`onShow` 时打印日志，并输出当前页面id.
 
 1. 创建一个help.js文件
 
    ```javascript
-   import createPage from "../grace/index.js"
-   import mixin from "../grace/mixin.js"
-   export default function(ob){
+   import grace from "../grace/index.js"
+   var page=grace.page;
+   grace.page=function(ob){
      mixin(ob,{
        onLoad(){
-         //页面调用onLoad时先配置当前页面$http实例
-         this.$http.config.baseURL = 'http://www.dtworkroom.com/doris/1/2.0.0/'
-         this.$http.config.timeout = 5000;
-         //设置拦截器
-         this.$http.interceptors.request.use((config, promise) => {
-            //输出请求体
-            console.log("interceptors.request",config.body);
-         });
+        //页面调用onShow时打印出当前页面id 
+        console.log("onLoad, pageID:"+this.$id)
        },
        onShow(){
         //页面调用onShow时打印出当前页面id 
-        console.log("show, pageID:"+this.$id)
+        console.log("onShow, pageID:"+this.$id)
      	}
      })
      //创建页面
-     createPage(ob)
+     page.call(grace,ob)
    }
+   export default grace;
    ```
 
 2. 在创建Page时引入help.js
 
    ```javascript
-   import createPage from "../../utils/help.js"
-   createPage({
-     data:{},
-     onLoad(){
-       //$http基地址、超时、拦截器已设置
-       this.$http.post("test",{xx:7}).then((d)=>{
-         console.log(d);
-       }).catch(err=>{
-         console.log(err.status,err.message)
-       })
-     },
-     ...
+   import grace from "../../utils/help.js"
+   grace.page({
+     data:{}
    })
+
+   //控制台输出
+   > onLoad, pageID:1
+   > onShow, pageID:1
    ```
 
 这样一来，相当于给所有的Page添加了`onLoad`、`onShow` 预处理。
@@ -415,7 +442,7 @@ createPage({
 
    ```javascript
     
-   mixin(ob,{
+   grace.mixin(ob,{
        onShow(){
         console.log("mixin onShow")
        }
@@ -423,11 +450,11 @@ createPage({
 
    ...
 
-   createPage({
+   grace.page({
       onShow(){
         console.log("page onShow")
-       }
-    })
+      }
+   })
 
    //页面显示时会输出： 
    > mixin onShow
@@ -438,4 +465,4 @@ createPage({
 
 ## 和wepy比较
 
-grace比wepy轻量 ，wepy是一个更接近vue 全功能的框架，需要wepy-cli、babel 等一系列工具的支持，上手比较复杂，但功能全，适合大项目，而grace是一个小巧纯粹的JavaScript库，支持vue的部分功能，主要特点是小巧，上手简单，适合功能不太复杂的项目。由于小程序的定位本身定位就是“触手可得，用完即走”，微信官方限制小程序包的最大上线是4M，小程序本身的定位就是轻量级，所以功能一般都不会太复杂，所以grace正是因为这个原因而存在的。
+请参考：https://juejin.im/post/5aa0e45af265da23a404635a

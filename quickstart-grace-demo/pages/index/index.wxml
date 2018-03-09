@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <button  bindtap="onTap" type="{{btnType}}" style='margin-top:10px'> {{btnText}} </button>
+  <test-component>ffff</test-component>
+  <view class="usermotto" wx:if="{{data.errCode==0}}">
+    <text class="user-motto">{{array[0].tt}}</text>
+    <text class="user-motto">{{array[1]}}</text>
+    <text class="user-motto">{{data.data.name}}</text>
+    <text class="user-motto">{{data.data.age}}</text>
+    <text class="user-motto">{{data.data.phone}}</text>
+    <text class="user-motto">{{data.data.email}}</text>
+    <text class="user-motto">{{data.data.address}}</text>
+  </view>
+</view>

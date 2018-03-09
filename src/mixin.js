@@ -12,7 +12,7 @@ export default function(origin,ob){
          }
       }else if(t == "object" && type(ob[key])==t){
        for(var k1 in ob[key]){
-         if (!v[k1].hasOwnProperty(key)){
+         if (!v.hasOwnProperty(k1)){
            v[k1]=ob[key][k1];
          }
        }
