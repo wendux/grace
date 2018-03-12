@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34c9be96-7d11-4d00-8749-8f8bd634ecf9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/quickstart-grace-demo/grace.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/grace/http.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/grace/http.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/utils/grace.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/utils/grace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -225,7 +221,7 @@
       <workItem from="1519983616396" duration="786000" />
       <workItem from="1520315790475" duration="6977000" />
       <workItem from="1520567430883" duration="2733000" />
-      <workItem from="1520836505251" duration="113000" />
+      <workItem from="1520836505251" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加事件总线&#10;2.支持跨页面传值">
       <created>1520322061888</created>
@@ -290,11 +286,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520583135829</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update demo">
+      <created>1520836642936</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1520836642936</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10609000" />
+    <option name="totallyTimeSpent" value="10733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="23" width="1389" height="877" extended-state="0" />
@@ -329,7 +332,8 @@
     <MESSAGE value="update doc" />
     <MESSAGE value="1.添加组件支持&#10;2.添加demo" />
     <MESSAGE value="更新函数名" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新函数名" />
+    <MESSAGE value="update demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="update demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
