@@ -1,6 +1,7 @@
 //获取应用实例
 const app = getApp()
 import grace from "../../utils/grace.js"
+
 grace.page({
   data:{
     userInfo: {},

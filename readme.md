@@ -262,24 +262,23 @@ Grace通过Promise封装了wx.request， 并支持拦截器、请求配置等：
 
    ```javascript
    // Add a request interceptor
-   this.$http.interceptors.request.use((config,promise)=>{
+   this.$http.interceptors.request.use((request)=>{
        // Do something before request is sent
-       config.headers["X-Tag"]="grace";
+        request.headers["X-Tag"]="grace";
        // Complete the request with custom data
-       // promise.resolve("fake data")
-       return config;
+       // return Promise.resolve("fake data")
    })
 
    // Add a response interceptor
    this.$http.interceptors.response.use(
-       (response,promise) => {
+       (response) => {
            // Do something with response data .
            // Just return the data field of response
            return response.data
        },
-       (err,promise) => {
+       (err) => {
          // Do something with response error
-           //promise.resolve("ssss")
+         // return Promise.resolve("ssss")
        }
    )
    ```
@@ -287,7 +286,7 @@ Grace通过Promise封装了wx.request， 并支持拦截器、请求配置等：
 Grace使用的http请求库是 [FLY](https://github.com/wendux/fly) , `$http`是 [FLY](https://github.com/wendux/fly)的一个实例，详情可以参照其官网，如果您想创建新的  [FLY](https://github.com/wendux/fly) 实例：
 
 ```javascript
-var newHttp=grace.createHttpClient();
+var newHttp=grace.creatHttpClient();
 ```
 
 注意：grace创建页面时，所有页面的`$http`都是同一个[FLY](https://github.com/wendux/fly) 实例，所以对`this.$http`的配置，会在全局生效，所以如果你想要配置全局的拦截器、请求基地址、超时时间等可以创建一个帮助文件，然后页面引入这个文件即可：

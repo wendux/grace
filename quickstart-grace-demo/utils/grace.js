@@ -2,7 +2,7 @@ import grace from "../grace/index.js"
 grace.http.config.baseURL = 'http://www.dtworkroom.com/doris/1/2.0.0/'
 grace.http.config.timeout = 5000;
 grace.http.interceptors.request.use((config, promise) => {
-    console.log(config.body);
+  console.log("interceptors.request",config.body);
 });
 var page = grace.page;
 grace.page = function (ob) {
