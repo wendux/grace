@@ -20,7 +20,7 @@
 
 ## 使用
 
-1. 将 https://github.com/wendux/grace/dist/grace.js  拷贝到小程序根目录下的grace目录,并命名为index.js
+1. 将 https://github.com/wendux/grace/blob/master/dist/grace.js  拷贝到小程序根目录下的grace目录,并命名为index.js
 2. 创建页面时用`grace.page` 替换 `Page` 即可。
 
 ```javascript
