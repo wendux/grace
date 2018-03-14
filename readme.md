@@ -20,7 +20,7 @@
 
 ## 使用
 
-1. 将 https://github.com/wendux/grace  工程中src目录中所有文件拷贝到小程序根目录下的grace目录
+1. 将 https://github.com/wendux/grace/dist/grace.js  拷贝到小程序根目录下的grace目录,并命名为index.js
 2. 创建页面时用`grace.page` 替换 `Page` 即可。
 
 ```javascript
@@ -336,6 +336,8 @@ this.$bus.$off("eventName",cb)
 ```
 
 当提供hanlder时，只将该hanlder移出监听者队列，如果没有传handler,则清空该事件的监听者队列。
+
+**注意，全局只有一个$bus实例，您也可以使用 `grace.bus` 替代 `this.$bus`.**
 
 
 

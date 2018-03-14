@@ -1,4 +1,5 @@
-import grace from "../grace/index.js"
+import  grace from "../grace/index.js"
+console.log(grace)
 grace.http.config.baseURL = 'http://www.dtworkroom.com/doris/1/2.0.0/'
 grace.http.config.timeout = 5000;
 grace.http.interceptors.request.use((request) => {

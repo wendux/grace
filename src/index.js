@@ -15,7 +15,7 @@ function hook(context) {
         }
     }
     //防止多次hook
-    if (origin.toString() !== hookFun.toString()) {
+    if (realFun.toString() !== hookFun.toString()) {
         Object.defineProperty(context, "setData", {
             get() {
                 return hookFun;
