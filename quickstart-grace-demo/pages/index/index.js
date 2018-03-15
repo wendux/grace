@@ -18,6 +18,7 @@ grace.page({
       this.$http.post("test", { xx: 7 }).then((d) => {
         //更新一个字段
          this.$data.btnType="default"
+         console.log(d)
         //更新多个字段
         this.$data={
           data:d.data,

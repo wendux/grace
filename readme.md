@@ -76,7 +76,7 @@ grace.component({
 }
 ```
 
-**注意：Grace 注入到实例中的所有方法和属性命名都以“$”开始。**
+**注意：Grace 注入到实例中的所有方法和属性名都以“$”开始。**
 
 
 
@@ -189,7 +189,7 @@ grace.page({
 
 ```
 
-对于已经创建的实例，grace 不能动态添加根级别的响应式属性。但是，可以使用 `$data.$set(object, key, value)` 方法向嵌套对象添加响应式属性。例如：
+如果需要动态添加响应式属性，可以使用 `$data.$set(object, key, value)` ，例如：
 
 ```javascript
 this.$data.$set(this.$data, 'b', 2)
@@ -218,11 +218,11 @@ this.$data.$set(this.$data, 'b', 2)
    this.$data.$commit();
    ```
 
-   在调用`$cache()`之后，所有数据的变化将会缓存起来（不会触发`setData`）, 知道调用 `$commit`后，才会统一刷新，这样即避免了频繁调用`setData`带来的性能消耗。
+   在调用`$cache()`之后，所有数据的变化将会缓存起来（不会触发`setData`）, 直到调用 `$commit`后，才会统一刷新，这样可以避免了频繁调用`setData`带来的性能消耗。
 
 2. **后台态页面进行 setData**
 
-   当页面进入后台态（用户不可见），不应该继续去进行`setData`，后台态页面的渲染用户是无法感受的，另外后台态页面去`setData`也会抢占前台页面的执行。当页面进入后台时，grace会自动停止数据更新，当页面再次转到前台时会自动开启渲染。
+   当页面进入后台态（用户不可见），不应该继续去进行`setData`，后台态页面的渲染用户是无法感受的，另外后台态页面去`setData`也会抢占前台页面的执行。当页面进入后台时，grace会自动停止数据更新，当页面再次转到前台时会自动开启渲染，而无需您手动去切换。
 
 ## Http
 
@@ -289,7 +289,9 @@ Grace使用的http请求库是 [FLY](https://github.com/wendux/fly) , `$http`是
 var newHttp=grace.creatHttpClient();
 ```
 
-注意：grace创建页面时，所有页面的`$http`都是同一个[FLY](https://github.com/wendux/fly) 实例，所以对`this.$http`的配置，会在全局生效，所以如果你想要配置全局的拦截器、请求基地址、超时时间等可以创建一个帮助文件，然后页面引入这个文件即可：
+**注意：grace创建页面时，所有页面的`$http`都是同一个[FLY](https://github.com/wendux/fly) 实例，你可以使用 `grace.http` 获取该实例  ，所以对 `grace.http`的配置，会在全局生效。**
+
+所以如果你想要配置全局的拦截器、请求基地址、超时时间等可以创建一个帮助文件，然后页面引入这个文件即可：
 
 ```javascript
 import grace from "../grace/index.js"
@@ -332,7 +334,7 @@ this.$bus.$emit("enventName", 1,2)
 取消监听
 
 ```javascript
-this.$bus.$off("eventName",cb)
+this.$bus.$off("eventName",handler)
 ```
 
 当提供hanlder时，只将该hanlder移出监听者队列，如果没有传handler,则清空该事件的监听者队列。
