@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"/Users/du/Documents/code/grace/package.json","includedInParent":true,"mtime":1520992428037}],"generated":{"js":"\"use strict\";function e(e){return Object.prototype.toString.call(e).slice(8,-1).toLowerCase()}Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.type=e;"},"hash":"c4a28bff4b0a0a486119dde7730522c7","cacheData":{"env":{}}}

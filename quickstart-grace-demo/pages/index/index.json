@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "test-component": "/pages/components/TestComponment"
+   }
+}

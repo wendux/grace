@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34c9be96-7d11-4d00-8749-8f8bd634ecf9" name="Default" comment="">
+    <list default="true" id="34c9be96-7d11-4d00-8749-8f8bd634ecf9" name="Default" comment="update doc &amp; fly.js(http)">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/07f78852c8f270fc6fd531f9782876fb.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/406cd39fcb7ee952061addce1fff9c63.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/4d35ba3c10b138951516bd997d044dbd.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/62fba0bc6f9ac8b2af350e250916c420.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/7a2008a0e0e8c822e0608913e43cd84e.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/80fa4ecd3a283e43830b038025d350be.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/85941640d37642de4bf0caa0b06b696c.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/ad56972e0bda71c608cb61773bc43f14.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/c4153b56f9eeea238e884dfd5b50cd1b.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/c847cb82f0ab96fb9024c9c5ee411a50.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/d1a405818c9ef516bfecf52aace03f17.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/fc804afd7ce80ecff33913fd2b6ee750.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/components/TestComponment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/components/TestComponment.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/components/TestComponment.wxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/components/TestComponment.wxss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/grace.js" afterPath="$PROJECT_DIR$/dist/grace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/utils/grace.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/utils/grace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/http.js" afterPath="$PROJECT_DIR$/src/http.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,7 +77,7 @@
       <file leaf-file-name="grace.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/grace.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="0">
               <caret line="0" column="1787" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13938" />
               <folding />
             </state>
@@ -152,8 +164,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="202" />
-    <option name="y" value="31" />
+    <option name="x" value="69" />
+    <option name="y" value="23" />
     <option name="width" value="1389" />
     <option name="height" value="877" />
   </component>
@@ -200,6 +212,19 @@
             <path>
               <item name="grace" type="b2602c69:ProjectViewProjectNode" />
               <item name="grace" type="462c0819:PsiDirectoryNode" />
+              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grace" type="462c0819:PsiDirectoryNode" />
+              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -218,14 +243,14 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/quickstart-grace-demo/grace" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/quickstart-grace-demo" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,7 +282,7 @@
       <workItem from="1520992047014" duration="1902000" />
       <workItem from="1520994238019" duration="1406000" />
       <workItem from="1520995943462" duration="542000" />
-      <workItem from="1521102410880" duration="2344000" />
+      <workItem from="1521102410880" duration="3075000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加事件总线&#10;2.支持跨页面传值">
       <created>1520322061888</created>
@@ -350,14 +375,21 @@
       <option name="project" value="LOCAL" />
       <updated>1520995970383</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update doc &amp; fly.js(http)">
+      <created>1521114942351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1521114942351</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18492000" />
+    <option name="totallyTimeSpent" value="19223000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="202" y="31" width="1389" height="877" extended-state="0" />
+    <frame x="69" y="23" width="1389" height="877" extended-state="0" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27542686" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -391,7 +423,8 @@
     <MESSAGE value="update demo" />
     <MESSAGE value="1.fix #6&#10;2.update doc &amp; demo" />
     <MESSAGE value="update doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="update doc" />
+    <MESSAGE value="update doc &amp; fly.js(http)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update doc &amp; fly.js(http)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -755,7 +788,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/grace.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="0">
           <caret line="0" column="1787" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13938" />
           <folding />
         </state>

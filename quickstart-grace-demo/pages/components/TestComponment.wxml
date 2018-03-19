@@ -1,0 +1,4 @@
+<!--pages/componments/TestComponment.wxml-->
+ <view bindtap='onTap' style='padding:10px; border:#eee 1px solid; margin-top:10px'> 
+  <text>{{text}}</text>
+ </view>
