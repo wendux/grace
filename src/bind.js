@@ -1,4 +1,5 @@
 import { type } from "./util.js"
+//重写更易性方法
 //功能：数据绑定，实现赋值更新
 export default function (context) {
   var cache = false;
@@ -9,12 +10,7 @@ export default function (context) {
   function proxy(ob, attr, value) {
     Object.defineProperty(ob, attr, {
       set(v) {
-        if (typeof v == "object") {
-          //代理新对象
-          proxy(ob, attr, deepProxy(v))
-        } else {
-          value = v;
-        }
+        value=proxyElement(v)
         if (!cache) {
           //触发数据更新
           context.setData($data, null, null, true)
@@ -51,6 +47,16 @@ export default function (context) {
    //重写更易性方法
     ["push","pop","shift","unshift","splice","sort","reverse"].forEach(function(e){
       var origin = n[e]
+      // Object.defineProperty(n, e, {
+      //   value:function(){
+      //     var r=origin.apply(n,[].slice.call(arguments))
+      //     changed = true;
+      //     if(!cache){
+      //       $data.$commit();
+      //     }
+      //     return r;
+      //   }
+      // });
       n[e]=function(){
         var r=origin.apply(this,[].slice.call(arguments))
         changed = true;

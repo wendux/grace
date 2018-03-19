@@ -9,10 +9,13 @@ grace.page({
     btnType:"primary",
     btnText:"请求网络接口",
     hasUserInfo: false,
+    arr:[5,2],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
   onTap: function () {
+    this.$data.arr = this.$data.arr.concat([4, 5, 6])
+    console.log(this.$data.arr)
     if (this.$data.btnText=="请求网络接口"){
       //测试网络接口
       this.$http.post("test", { xx: 7 }).then((d) => {
