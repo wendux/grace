@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34c9be96-7d11-4d00-8749-8f8bd634ecf9" name="Default" comment="update doc &amp; fly.js(http)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/07f78852c8f270fc6fd531f9782876fb.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/406cd39fcb7ee952061addce1fff9c63.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/4d35ba3c10b138951516bd997d044dbd.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/62fba0bc6f9ac8b2af350e250916c420.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/7a2008a0e0e8c822e0608913e43cd84e.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/80fa4ecd3a283e43830b038025d350be.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/85941640d37642de4bf0caa0b06b696c.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/ad56972e0bda71c608cb61773bc43f14.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/c4153b56f9eeea238e884dfd5b50cd1b.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/c847cb82f0ab96fb9024c9c5ee411a50.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/d1a405818c9ef516bfecf52aace03f17.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.cache/fc804afd7ce80ecff33913fd2b6ee750.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/components/TestComponment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/components/TestComponment.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/components/TestComponment.wxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/components/TestComponment.wxss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.json" />
+    <list default="true" id="34c9be96-7d11-4d00-8749-8f8bd634ecf9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.wxml" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.wxml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="265">
@@ -54,10 +38,62 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding>
+                <marker date="1521428189610" expanded="true" signature="83:1810" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="302:727" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="411:598" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="528:590" ph="{&quot;data&quot;: d.data...}" />
+                <marker date="1521428189610" expanded="true" signature="613:647" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="658:723" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="680:716" ph="{&quot;url&quot;: '../logs/logs'...}" />
+                <marker date="1521428189610" expanded="true" signature="748:803" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="826:1643" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="996:1099" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="1015:1093" ph="{&quot;userInfo&quot;: app.globalData.userInfo...}" />
+                <marker date="1521428189610" expanded="true" signature="1128:1365" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="1136:1215" ph="//..." />
+                <marker date="1521428189610" expanded="true" signature="1257:1359" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="1278:1351" ph="{&quot;userInfo&quot;: res.userInfo...}" />
+                <marker date="1521428189610" expanded="true" signature="1371:1639" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="1437:1632" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="1463:1624" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="1535:1614" ph="{&quot;userInfo&quot;: res.userInfo...}" />
+                <marker date="1521428189610" expanded="true" signature="1673:1808" ph="{...}" />
+                <marker date="1521428189610" expanded="true" signature="1738:1804" ph="{&quot;userInfo&quot;: e.detail.userInfo...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="http.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/http.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="9555">
               <caret line="637" column="3" lean-forward="false" selection-start-line="637" selection-start-column="3" selection-end-line="637" selection-end-column="3" />
               <folding />
             </state>
@@ -78,27 +114,7 @@
         <entry file="file://$PROJECT_DIR$/dist/grace.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="1787" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13938" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bind.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bind.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="110" column="15" lean-forward="false" selection-start-line="110" selection-start-column="15" selection-end-line="110" selection-end-column="15" />
+              <caret line="0" column="1787" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13681" />
               <folding />
             </state>
           </provider>
@@ -107,7 +123,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="240">
               <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -119,7 +135,7 @@
       <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="330">
               <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
               <folding />
             </state>
@@ -144,6 +160,7 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/src/http.js" />
         <option value="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
+        <option value="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.wxml" />
       </list>
     </option>
   </component>
@@ -164,7 +181,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="69" />
+    <option name="x" value="120" />
     <option name="y" value="23" />
     <option name="width" value="1389" />
     <option name="height" value="877" />
@@ -186,6 +203,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,13 +243,19 @@
             <path>
               <item name="grace" type="b2602c69:ProjectViewProjectNode" />
               <item name="grace" type="462c0819:PsiDirectoryNode" />
+              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,6 +307,7 @@
       <workItem from="1520994238019" duration="1406000" />
       <workItem from="1520995943462" duration="542000" />
       <workItem from="1521102410880" duration="3075000" />
+      <workItem from="1521427995228" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加事件总线&#10;2.支持跨页面传值">
       <created>1520322061888</created>
@@ -382,17 +407,24 @@
       <option name="project" value="LOCAL" />
       <updated>1521114942351</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update demo">
+      <created>1521428246351</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1521428246351</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19223000" />
+    <option name="totallyTimeSpent" value="19494000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="23" width="1389" height="877" extended-state="0" />
+    <frame x="120" y="23" width="1389" height="877" extended-state="0" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27542686" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27913883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -420,43 +452,17 @@
     <MESSAGE value="1.添加事件总线&#10;2.支持跨页面传值" />
     <MESSAGE value="1.添加组件支持&#10;2.添加demo" />
     <MESSAGE value="更新函数名" />
-    <MESSAGE value="update demo" />
     <MESSAGE value="1.fix #6&#10;2.update doc &amp; demo" />
     <MESSAGE value="update doc" />
     <MESSAGE value="update doc &amp; fly.js(http)" />
-    <option name="LAST_COMMIT_MESSAGE" value="update doc &amp; fly.js(http)" />
+    <MESSAGE value="update demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="update demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5265">
-          <caret line="351" column="2" lean-forward="false" selection-start-line="351" selection-start-column="2" selection-end-line="351" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -730,7 +736,7 @@
     <entry file="file://$PROJECT_DIR$/src/bind.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1650">
-          <caret line="110" column="15" lean-forward="false" selection-start-line="110" selection-start-column="15" selection-end-line="110" selection-end-column="15" />
+          <caret line="110" column="3" lean-forward="true" selection-start-line="110" selection-start-column="3" selection-end-line="110" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -745,7 +751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="240">
           <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -772,7 +778,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="330">
           <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
           <folding />
         </state>
@@ -780,7 +786,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/http.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
+        <state relative-caret-position="9555">
           <caret line="637" column="3" lean-forward="false" selection-start-line="637" selection-start-column="3" selection-end-line="637" selection-end-column="3" />
           <folding />
         </state>
@@ -789,7 +795,7 @@
     <entry file="file://$PROJECT_DIR$/dist/grace.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="1787" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13938" />
+          <caret line="0" column="1787" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13681" />
           <folding />
         </state>
       </provider>
@@ -798,6 +804,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="0" column="13938" lean-forward="false" selection-start-line="0" selection-start-column="13938" selection-end-line="0" selection-end-column="13938" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <marker date="1521428189610" expanded="true" signature="83:1810" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="302:727" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="411:598" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="528:590" ph="{&quot;data&quot;: d.data...}" />
+            <marker date="1521428189610" expanded="true" signature="613:647" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="658:723" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="680:716" ph="{&quot;url&quot;: '../logs/logs'...}" />
+            <marker date="1521428189610" expanded="true" signature="748:803" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="826:1643" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="996:1099" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="1015:1093" ph="{&quot;userInfo&quot;: app.globalData.userInfo...}" />
+            <marker date="1521428189610" expanded="true" signature="1128:1365" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="1136:1215" ph="//..." />
+            <marker date="1521428189610" expanded="true" signature="1257:1359" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="1278:1351" ph="{&quot;userInfo&quot;: res.userInfo...}" />
+            <marker date="1521428189610" expanded="true" signature="1371:1639" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="1437:1632" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="1463:1624" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="1535:1614" ph="{&quot;userInfo&quot;: res.userInfo...}" />
+            <marker date="1521428189610" expanded="true" signature="1673:1808" ph="{...}" />
+            <marker date="1521428189610" expanded="true" signature="1738:1804" ph="{&quot;userInfo&quot;: e.detail.userInfo...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
