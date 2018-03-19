@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34c9be96-7d11-4d00-8749-8f8bd634ecf9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.wxml" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.wxml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -307,7 +305,7 @@
       <workItem from="1520994238019" duration="1406000" />
       <workItem from="1520995943462" duration="542000" />
       <workItem from="1521102410880" duration="3075000" />
-      <workItem from="1521427995228" duration="271000" />
+      <workItem from="1521427995228" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加事件总线&#10;2.支持跨页面传值">
       <created>1520322061888</created>
@@ -414,11 +412,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521428246351</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update demo">
+      <created>1521428284518</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1521428284518</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19494000" />
+    <option name="totallyTimeSpent" value="19516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="120" y="23" width="1389" height="877" extended-state="0" />
