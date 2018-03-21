@@ -49,6 +49,7 @@ function page(ob) {
             $bus.$on(backEvent, (id, data) => {
                 if (id == this.$id) {
                     if (this.$onBackData) {
+                        this.$hide = false
                         this.$onBackData.call(this, data)
                     }
                 }
