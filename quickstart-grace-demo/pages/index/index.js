@@ -37,10 +37,6 @@ grace.page({
   $onBackData(data){
     //打印页面返回的数据
     console.log("backData",data);
-    this.setData({
-      city2: "xx"
-    })
-    console.log("修改后:" ,this.$data.city2);
   },
   onLoad:function () {
 
