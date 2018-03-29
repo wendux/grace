@@ -1,7 +1,7 @@
 //获取应用实例
 const app = getApp()
 import grace from "../../utils/grace.js"
-
+global.fly=grace.http
 grace.page({
   data:{
     userInfo: {},
