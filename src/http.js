@@ -253,7 +253,7 @@
                                     var statusMessage = getAndDelete("statusMessage");
 
                                     // Network error, set the status code 0
-                                    if (self.status === 0) {
+                                    if (!self.status) {
                                         self.statusText = responseText;
                                         self._call("onerror", {msg: statusMessage});
                                     } else {
@@ -404,7 +404,9 @@
                                 options = rqi.handler(options, Promise) || options;
                             }
                             function isPromise(p) {
-                                return p instanceof Promise;
+                                // some  polyfill implementation of Promise may be not standard,
+                                // so, we test by duck-typing
+                                return p.then && p.catch;
                             }
 
                             if (isPromise(options)) {
@@ -523,7 +525,7 @@
                                     response = JSON.parse(response);
                                 }
                                 var headers = {};
-                                var items = engine.getAllResponseHeaders().split("\r\n");
+                                var items = (engine.getAllResponseHeaders() || "").split("\r\n");
                                 items.pop();
                                 items.forEach(function (e) {
                                     var key = e.split(":")[0];

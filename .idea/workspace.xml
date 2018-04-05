@@ -5,8 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/grace.js" afterPath="$PROJECT_DIR$/dist/grace.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/http.js" afterPath="$PROJECT_DIR$/src/http.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mixin.js" afterPath="$PROJECT_DIR$/src/mixin.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16442" lean-forward="false" selection-start-line="0" selection-start-column="16442" selection-end-line="0" selection-end-column="16442" />
+            <state relative-caret-position="82">
+              <caret line="0" column="12078" lean-forward="false" selection-start-line="0" selection-start-column="12078" selection-end-line="0" selection-end-column="12078" />
               <folding />
             </state>
           </provider>
@@ -35,50 +35,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <marker date="1522294952524" expanded="true" signature="113:289" ph="{&quot;btnType&quot;: &quot;primary&quot;...}" />
-                <marker date="1522294952524" expanded="true" signature="323:748" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="362:675" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="432:619" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="549:611" ph="{&quot;data&quot;: d.data...}" />
-                <marker date="1522294952524" expanded="true" signature="634:668" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="679:744" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="701:737" ph="{&quot;url&quot;: '../logs/logs'...}" />
-                <marker date="1522294952524" expanded="true" signature="769:824" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="847:1664" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="928:982" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="1017:1120" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="1036:1114" ph="{&quot;userInfo&quot;: app.globalData.userInfo...}" />
-                <marker date="1522294952524" expanded="true" signature="1149:1386" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="1157:1236" ph="//..." />
-                <marker date="1522294952524" expanded="true" signature="1278:1380" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="1299:1372" ph="{&quot;userInfo&quot;: res.userInfo...}" />
-                <marker date="1522294952524" expanded="true" signature="1392:1660" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="1458:1653" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="1484:1645" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="1556:1635" ph="{&quot;userInfo&quot;: res.userInfo...}" />
-                <marker date="1522294952524" expanded="true" signature="1694:1829" ph="{...}" />
-                <marker date="1522294952524" expanded="true" signature="1759:1825" ph="{&quot;userInfo&quot;: e.detail.userInfo...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/pages/index/index.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -87,8 +43,8 @@
       <file leaf-file-name="http.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/http.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1755">
-              <caret line="646" column="3" lean-forward="false" selection-start-line="646" selection-start-column="3" selection-end-line="646" selection-end-column="3" />
+            <state relative-caret-position="379">
+              <caret line="648" column="3" lean-forward="false" selection-start-line="648" selection-start-column="3" selection-end-line="648" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -117,28 +73,48 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="-650">
               <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grace.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dist/grace.js">
+      <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="0" column="2048" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13727" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.md">
+      <file leaf-file-name="grace.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/grace.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+            <state relative-caret-position="270">
+              <caret line="0" column="2176" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13727" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mixin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mixin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event-bus.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/event-bus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,8 +138,9 @@
         <option value="$PROJECT_DIR$/quickstart-grace-demo/utils/grace.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/bind.js" />
-        <option value="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
+        <option value="$PROJECT_DIR$/src/mixin.js" />
         <option value="$PROJECT_DIR$/src/http.js" />
+        <option value="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
       </list>
     </option>
   </component>
@@ -183,10 +160,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="73" />
-    <option name="y" value="301" />
-    <option name="width" value="1337" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="171" />
+    <option name="y" value="65" />
+    <option name="width" value="1389" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -205,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,6 +241,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,7 +296,9 @@
       <workItem from="1521427995228" duration="447000" />
       <workItem from="1521436833870" duration="4635000" />
       <workItem from="1521845191354" duration="13000" />
-      <workItem from="1522295134186" duration="68000" />
+      <workItem from="1522295134186" duration="645000" />
+      <workItem from="1522309962384" duration="616000" />
+      <workItem from="1522903702804" duration="180000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加事件总线&#10;2.支持跨页面传值">
       <created>1520322061888</created>
@@ -468,17 +447,24 @@
       <option name="project" value="LOCAL" />
       <updated>1521803829867</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update http module">
+      <created>1522295220277</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1522295220277</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24386000" />
+    <option name="totallyTimeSpent" value="25759000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="23" width="1389" height="877" extended-state="6" />
+    <frame x="171" y="65" width="1389" height="877" extended-state="0" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2910171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29992577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -510,24 +496,15 @@
     <MESSAGE value="update doc" />
     <MESSAGE value="update doc &amp; fly.js(http)" />
     <MESSAGE value="update demo" />
-    <MESSAGE value="update http module" />
     <MESSAGE value="fix #12" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix #12" />
+    <MESSAGE value="update http module" />
+    <option name="LAST_COMMIT_MESSAGE" value="update http module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/index.js" />
-    <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16515">
-          <caret line="1108" column="7" lean-forward="false" selection-start-line="1108" selection-start-column="7" selection-end-line="1108" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -764,13 +741,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/bind.js" />
-    <entry file="file://$PROJECT_DIR$/src/mixin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -822,38 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <marker date="1522294952524" expanded="true" signature="113:289" ph="{&quot;btnType&quot;: &quot;primary&quot;...}" />
-            <marker date="1522294952524" expanded="true" signature="323:748" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="362:675" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="432:619" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="549:611" ph="{&quot;data&quot;: d.data...}" />
-            <marker date="1522294952524" expanded="true" signature="634:668" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="679:744" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="701:737" ph="{&quot;url&quot;: '../logs/logs'...}" />
-            <marker date="1522294952524" expanded="true" signature="769:824" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="847:1664" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="928:982" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="1017:1120" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="1036:1114" ph="{&quot;userInfo&quot;: app.globalData.userInfo...}" />
-            <marker date="1522294952524" expanded="true" signature="1149:1386" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="1157:1236" ph="//..." />
-            <marker date="1522294952524" expanded="true" signature="1278:1380" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="1299:1372" ph="{&quot;userInfo&quot;: res.userInfo...}" />
-            <marker date="1522294952524" expanded="true" signature="1392:1660" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="1458:1653" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="1484:1645" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="1556:1635" ph="{&quot;userInfo&quot;: res.userInfo...}" />
-            <marker date="1522294952524" expanded="true" signature="1694:1829" ph="{...}" />
-            <marker date="1522294952524" expanded="true" signature="1759:1825" ph="{&quot;userInfo&quot;: e.detail.userInfo...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -866,14 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16442" lean-forward="false" selection-start-line="0" selection-start-column="16442" selection-end-line="0" selection-end-column="16442" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/utils/grace.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -882,18 +812,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mixin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/event-bus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-650">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/http.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="646" column="3" lean-forward="false" selection-start-line="646" selection-start-column="3" selection-end-line="646" selection-end-column="3" />
+        <state relative-caret-position="379">
+          <caret line="648" column="3" lean-forward="false" selection-start-line="648" selection-start-column="3" selection-end-line="648" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/grace.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="0" column="2048" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13727" />
+        <state relative-caret-position="270">
+          <caret line="0" column="2176" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13727" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="0" column="12078" lean-forward="false" selection-start-line="0" selection-start-column="12078" selection-end-line="0" selection-end-column="12078" />
           <folding />
         </state>
       </provider>

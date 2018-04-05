@@ -7,8 +7,8 @@ export default function(origin,ob){
       if(t =="function"){
          origin[key]=function(){
            var arg = [].slice.call(arguments)
-           ob[key].call(this,arg)
-           return v.call(this,arg)
+           ob[key].apply(this,arg)
+           return v.apply(this,arg)
          }
       }else if(t == "object" && type(ob[key])==t){
        for(var k1 in ob[key]){
