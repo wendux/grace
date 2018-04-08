@@ -3,8 +3,10 @@ console.log(grace)
 grace.http.config.baseURL = 'http://www.dtworkroom.com/doris/1/2.0.0/'
 //grace.http.config.baseURL = 'http://localhost/ds'
 grace.http.config.timeout = 5000;
-grace.http.interceptors.request.use((request) => {
-  console.log("interceptors.request",request);
+grace.http.interceptors.request.use((con) => {
+  console.log("interceptors.request",con);
+  con.body = JSON.stringify(con.body)
+  return request;
 });
 var page = grace.page;
 grace.page = function (ob) {

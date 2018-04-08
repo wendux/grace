@@ -73,8 +73,7 @@
         /******/ 	__webpack_require__.p = "";
         /******/
         /******/ 	// Load entry module and return exports
-        /******/
-        return __webpack_require__(__webpack_require__.s = 11);
+        /******/ 	return __webpack_require__(__webpack_require__.s = 11);
         /******/ })
     /************************************************************************/
     /******/ ([
@@ -255,7 +254,7 @@
                                     // Network error, set the status code 0
                                     if (!self.status) {
                                         self.statusText = responseText;
-                                        self._call("onerror", {msg: statusMessage});
+                                        self._call("onerror", { msg: statusMessage });
                                     } else {
                                         // Parsing the response headers to array in a object,  because
                                         // there may be multiple values with the same header name
@@ -461,8 +460,7 @@
                                 if (responseType !== "stream") {
                                     engine.responseType = responseType;
                                 }
-                            } catch (e) {
-                            }
+                            } catch (e) {}
 
                             // If the request data is json object, transforming it  to json string,
                             // and set request content-type to "json". In browser,  the data will
@@ -481,8 +479,7 @@
                                         // In browser environment, some header fields are readonly,
                                         // write will cause the exception .
                                         engine.setRequestHeader(k, options.headers[k]);
-                                    } catch (e) {
-                                    }
+                                    } catch (e) {}
                                 }
                             }
 
@@ -533,7 +530,7 @@
                                 });
                                 var status = engine.status;
                                 var statusText = engine.statusText;
-                                var data = {data: response, headers: headers, status: status, statusText: statusText};
+                                var data = { data: response, headers: headers, status: status, statusText: statusText };
                                 // The _response filed of engine is set in  adapter which be called in engine-wrapper.js
                                 utils.merge(data, engine._response);
                                 if (status >= 200 && status < 300 || status === 304) {
@@ -556,7 +553,7 @@
                             };
                             engine._options = options;
                             setTimeout(function () {
-                                engine.send(isGet ? null : data);
+                                engine.send(isGet ? null : options.body);
                             }, 0);
                         });
                         promise.engine = engine;
@@ -603,7 +600,7 @@
                 var con = {
                     method: request.method,
                     url: request.url,
-                    dataType: request.dataType || "text",
+                    dataType: request.dataType || undefined,
                     header: request.headers,
                     data: request.body || {},
                     success: function success(res) {

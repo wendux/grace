@@ -28,5 +28,6 @@ module.exports = {
             //     warnings: true
             // },
             sourceMap: true
-        })]
+        })
+    ]
 }
