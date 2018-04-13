@@ -6,7 +6,7 @@ grace.http.config.timeout = 5000;
 grace.http.interceptors.request.use((con) => {
   console.log("interceptors.request",con);
   con.body = JSON.stringify(con.body)
-  return request;
+  return con;
 });
 var page = grace.page;
 grace.page = function (ob) {
