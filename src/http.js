@@ -356,68 +356,35 @@
                     _classCallCheck(this, Fly);
 
                     this.engine = engine || XMLHttpRequest;
-                    var fly = this;
+
+                    this.default = this; //For typeScript
 
                     /**
-                     * Factory to generate async task creators for interceptors.
-                     * The current fly instance will be locked when an async task be created.
-                     * Once locked, the incoming request will be added to a request queue, and the
-                     * async task will not been dequeue and performed until the fly instance is unlocked.
+                     * Add  lock/unlock API for interceptor.
+                     *
+                     * Once an request/response interceptor is locked, the incoming request/response
+                     * will be added to a queue before they enter the interceptor, they will not be
+                     * continued  until the interceptor is unlocked.
                      *
                      * @param [interceptor] either is interceptors.request or interceptors.response
-                     * @param [isResponseInterceptor] whether is interceptors.response or not
-                     * @returns {Function} async task creators
                      */
-                    function wrap(interceptor, isResponseInterceptor) {
-                        /**
-                         * Submit async task for interceptors.
-                         * [promise] async task itself is a promise
-                         */
-                        return function (promise) {
-                            // `this` either is interceptors.request or interceptors.response
-                            var _this = this;
-                            /**
-                             * [interceptor].p is a lock tag which actually is a Promise object.
-                             * The current fly instance will be locked when an async task be submit
-                             * in interceptors.
-                             */
-                            _this.p = new Promise(function (resolve) {
-                                function t() {
-                                    if (interceptor.p) {
-                                        if (isResponseInterceptor) {
-                                            if (interceptor.p !== _this.p) {
-                                                _this.p = null;
-                                                resolve();
-                                            } else {
-                                                interceptor.p = _this.p = null;
-                                                resolve();
-                                            }
-                                        } else {
-                                            interceptor.p.then(function () {
-                                                _this.p = null;
-                                                resolve();
-                                            });
-                                        }
-                                    } else {
-                                        resolve();
-                                        _this.p = null;
-                                    }
+                    function wrap(interceptor) {
+                        var completer;
+                        utils.merge(interceptor, {
+                            lock: function lock() {
+                                if (!completer) {
+                                    interceptor.p = new Promise(function (resolve) {
+                                        completer = resolve;
+                                    });
                                 }
-
-                                //promise.finally() may not be implemented in some Promise polyfill, so we don't use it at now.
-                                promise.then(t, t);
-                            });
-                            if (isResponseInterceptor) {
-                                //
-                                if (!interceptor.p) {
-                                    interceptor.p = _this.p;
+                            },
+                            unlock: function unlock() {
+                                if (completer) {
+                                    completer();
+                                    interceptor.p = completer = null;
                                 }
-                            } else {
-                                //add tag, and use it later
-                                fly.t = 1;
                             }
-                            return promise;
-                        };
+                        });
                     }
 
                     var interceptors = this.interceptors = {
@@ -436,9 +403,9 @@
 
                     var irq = interceptors.request;
                     var irp = interceptors.response;
-                    // Generate async task creator for interceptor.
-                    irq.await = wrap(irp);
-                    irp.await = wrap(irq, 1);
+                    wrap(irp);
+                    wrap(irq);
+
                     this.config = {
                         method: "GET",
                         baseURL: "",
@@ -452,7 +419,7 @@
                 _createClass(Fly, [{
                     key: "request",
                     value: function request(url, data, options) {
-                        var _this2 = this;
+                        var _this = this;
 
                         var engine = new this.engine();
                         var contentType = "Content-Type";
@@ -472,13 +439,13 @@
                             function isPromise(p) {
                                 // some  polyfill implementation of Promise may be not standard,
                                 // so, we test by duck-typing
-                                return p.then && p.catch;
+                                return p && p.then && p.catch;
                             }
 
                             /**
-                             * If the current fly instance has been locked，the new request will enter the request queue
-                             * @param [promise] Once the current fly instance is unlocked, this promise will be resolved.
-                             *                  if the promise exist, indicate the current fly instance is locked.
+                             * If the request/response interceptor has been locked，
+                             * the new request/response will enter a queue. otherwise, it will be performed directly.
+                             * @param [promise] if the promise exist, means the interceptor is  locked.
                              * @param [callback]
                              */
                             function enqueueIfLocked(promise, callback) {
@@ -639,7 +606,7 @@
                             }
 
                             enqueueIfLocked(requestInterceptor.p, function () {
-                                utils.merge(options, _this2.config);
+                                utils.merge(options, _this.config);
                                 var headers = options.headers;
                                 headers[contentType] = headers[contentType] || headers[contentTypeLowerCase] || 'application/x-www-form-urlencoded';
                                 delete headers[contentTypeLowerCase];
@@ -647,25 +614,23 @@
                                 url = utils.trim(url || "");
                                 options.method = options.method.toUpperCase();
                                 options.url = url;
+                                var ret = options;
                                 if (requestInterceptorHandler) {
-                                    options = requestInterceptorHandler.call(requestInterceptor, options, Promise) || options;
+                                    ret = requestInterceptorHandler.call(requestInterceptor, options, Promise) || options;
                                 }
-                                var async = _this2.t;
-                                delete _this2.t;
-                                if (isPromise(options)) {
-                                    options.then(function (d) {
-                                        //support async  interceptors
-                                        if (async) {
-                                            makeRequest(d);
-                                        } else {
-                                            resolve(d);
-                                        }
-                                    }, function (err) {
-                                        reject(err);
-                                    });
-                                } else {
-                                    makeRequest(options);
+                                if (!isPromise(ret)) {
+                                    ret = Promise.resolve(ret);
                                 }
+                                ret.then(function (d) {
+                                    //if options continue
+                                    if (d === options) {
+                                        makeRequest(d);
+                                    } else {
+                                        resolve(d);
+                                    }
+                                }, function (err) {
+                                    reject(err);
+                                });
                             });
                         });
                         promise.engine = engine;
@@ -683,10 +648,25 @@
                             return callback.apply(null, arr);
                         };
                     }
+                }, {
+                    key: "lock",
+                    value: function lock() {
+                        this.interceptors.request.lock();
+                    }
+                }, {
+                    key: "unlock",
+                    value: function unlock() {
+                        this.interceptors.request.unlock();
+                    }
                 }]);
 
                 return Fly;
             }();
+
+//For typeScript
+
+
+            Fly.default = Fly;
 
             ["get", "post", "put", "patch", "head", "delete"].forEach(function (e) {
                 Fly.prototype[e] = function (url, data, option) {
