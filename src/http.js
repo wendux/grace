@@ -73,8 +73,7 @@
         /******/ 	__webpack_require__.p = "";
         /******/
         /******/ 	// Load entry module and return exports
-        /******/
-        return __webpack_require__(__webpack_require__.s = 11);
+        /******/ 	return __webpack_require__(__webpack_require__.s = 11);
         /******/ })
     /************************************************************************/
     /******/ ([
@@ -107,17 +106,39 @@
                     return encodeURIComponent(val).replace(/%40/gi, '@').replace(/%3A/gi, ':').replace(/%24/g, '$').replace(/%2C/gi, ',').replace(/%20/g, '+').replace(/%5B/gi, '[').replace(/%5D/gi, ']');
                 },
                 formatParams: function formatParams(data) {
-                    var arr = [];
-                    for (var name in data) {
-                        var value = data[name];
-                        if (this.isObject(value)) {
-                            value = JSON.stringify(value);
-                        }
-                        arr.push(this.encode(name) + "=" + this.encode(value));
+                    var str = "";
+                    var first = true;
+                    var that = this;
+                    if ((typeof data === 'undefined' ? 'undefined' : _typeof(data)) != "object") {
+                        return data;
                     }
-                    return arr.join("&");
-                },
+                    function _encode(sub, path) {
+                        var encode = that.encode;
+                        var type = that.type(sub);
+                        if (type == "array") {
+                            sub.forEach(function (e, i) {
+                                _encode(e, path + "%5B%5D");
+                            });
+                        } else if (type == "object") {
+                            for (var key in sub) {
+                                if (path) {
+                                    _encode(sub[key], path + "%5B" + encode(key) + "%5D");
+                                } else {
+                                    _encode(sub[key], encode(key));
+                                }
+                            }
+                        } else {
+                            if (!first) {
+                                str += "&";
+                            }
+                            first = false;
+                            str += path + "=" + encode(sub);
+                        }
+                    }
 
+                    _encode(data, "");
+                    return str;
+                },
 
                 // Do not overwrite existing attributes
                 merge: function merge(a, b) {
@@ -255,7 +276,7 @@
                                     // Network error, set the status code 0
                                     if (!self.status) {
                                         self.statusText = responseText;
-                                        self._call("onerror", {msg: statusMessage});
+                                        self._call("onerror", { msg: statusMessage });
                                     } else {
                                         // Parsing the response headers to array in a object,  because
                                         // there may be multiple values with the same header name
@@ -369,19 +390,31 @@
                      * @param [interceptor] either is interceptors.request or interceptors.response
                      */
                     function wrap(interceptor) {
-                        var completer;
+                        var resolve;
+                        var reject;
+
+                        function _clear() {
+                            interceptor.p = resolve = reject = null;
+                        }
                         utils.merge(interceptor, {
                             lock: function lock() {
-                                if (!completer) {
-                                    interceptor.p = new Promise(function (resolve) {
-                                        completer = resolve;
+                                if (!resolve) {
+                                    interceptor.p = new Promise(function (_resolve, _reject) {
+                                        resolve = _resolve;
+                                        reject = _reject;
                                     });
                                 }
                             },
                             unlock: function unlock() {
-                                if (completer) {
-                                    completer();
-                                    interceptor.p = completer = null;
+                                if (resolve) {
+                                    resolve();
+                                    _clear();
+                                }
+                            },
+                            clear: function clear() {
+                                if (reject) {
+                                    reject("cancel");
+                                    _clear();
                                 }
                             }
                         });
@@ -487,7 +520,6 @@
                                 }
 
                                 var responseType = utils.trim(options.responseType || "");
-                                engine.withCredentials = !!options.withCredentials;
                                 var isGet = options.method === "GET";
                                 if (isGet) {
                                     if (data) {
@@ -501,23 +533,33 @@
 
                                 // try catch for ie >=9
                                 try {
+                                    engine.withCredentials = !!options.withCredentials;
                                     engine.timeout = options.timeout || 0;
                                     if (responseType !== "stream") {
                                         engine.responseType = responseType;
                                     }
-                                } catch (e) {
-                                }
+                                } catch (e) {}
 
+                                var customContentType = options.headers[contentType] || options.headers[contentTypeLowerCase];
+
+                                // default content type
+                                var _contentType = "application/x-www-form-urlencoded";
                                 // If the request data is json object, transforming it  to json string,
                                 // and set request content-type to "json". In browser,  the data will
                                 // be sent as RequestBody instead of FormData
-                                if (!utils.isFormData(data) && ["object", "array"].indexOf(utils.type(data)) !== -1) {
-                                    options.headers[contentType] = 'application/json;charset=utf-8';
+                                if (utils.trim((customContentType || "").toLowerCase()) === _contentType) {
+                                    data = utils.formatParams(data);
+                                } else if (!utils.isFormData(data) && ["object", "array"].indexOf(utils.type(data)) !== -1) {
+                                    _contentType = 'application/json;charset=utf-8';
                                     data = JSON.stringify(data);
+                                }
+                                //If user doesn't set content-type, set default.
+                                if (!customContentType) {
+                                    options.headers[contentType] = _contentType;
                                 }
 
                                 for (var k in options.headers) {
-                                    if (k === contentType && (utils.isFormData(data) || !data || isGet)) {
+                                    if (k === contentType && utils.isFormData(data)) {
                                         // Delete the content-type, Let the browser set it
                                         delete options.headers[k];
                                     } else {
@@ -525,8 +567,7 @@
                                             // In browser environment, some header fields are readonly,
                                             // write will cause the exception .
                                             engine.setRequestHeader(k, options.headers[k]);
-                                        } catch (e) {
-                                        }
+                                        } catch (e) {}
                                     }
                                 }
 
@@ -537,7 +578,8 @@
                                             if (type) {
                                                 data.request = options;
                                             }
-                                            data = handler.call(responseInterceptor, data, Promise) || data;
+                                            var ret = handler.call(responseInterceptor, data, Promise);
+                                            data = ret === undefined ? data : ret;
                                         }
                                         if (!isPromise(data)) {
                                             data = Promise[type === 0 ? "resolve" : "reject"](data);
@@ -561,9 +603,9 @@
                                 }
 
                                 engine.onload = function () {
-                                    // The xhr of IE9 has not response filed
+                                    // The xhr of IE9 has not response field
                                     var response = engine.response || engine.responseText;
-                                    if (options.parseJson && (engine.getResponseHeader(contentType) || "").indexOf("json") !== -1
+                                    if (response && options.parseJson && (engine.getResponseHeader(contentType) || "").indexOf("json") !== -1
                                         // Some third engine implementation may transform the response text to json object automatically,
                                         // so we should test the type of response before transforming it
                                         && !utils.isObject(response)) {
@@ -573,12 +615,13 @@
                                     var items = (engine.getAllResponseHeaders() || "").split("\r\n");
                                     items.pop();
                                     items.forEach(function (e) {
+                                        if (!e) return;
                                         var key = e.split(":")[0];
                                         headers[key] = engine.getResponseHeader(key);
                                     });
                                     var status = engine.status;
                                     var statusText = engine.statusText;
-                                    var data = {data: response, headers: headers, status: status, statusText: statusText};
+                                    var data = { data: response, headers: headers, status: status, statusText: statusText };
                                     // The _response filed of engine is set in  adapter which be called in engine-wrapper.js
                                     utils.merge(data, engine._response);
                                     if (status >= 200 && status < 300 || status === 304) {
@@ -608,7 +651,7 @@
                             enqueueIfLocked(requestInterceptor.p, function () {
                                 utils.merge(options, _this.config);
                                 var headers = options.headers;
-                                headers[contentType] = headers[contentType] || headers[contentTypeLowerCase] || 'application/x-www-form-urlencoded';
+                                headers[contentType] = headers[contentType] || headers[contentTypeLowerCase] || "";
                                 delete headers[contentTypeLowerCase];
                                 options.body = data || options.body;
                                 url = utils.trim(url || "");
@@ -648,16 +691,6 @@
                             return callback.apply(null, arr);
                         };
                     }
-                }, {
-                    key: "lock",
-                    value: function lock() {
-                        this.interceptors.request.lock();
-                    }
-                }, {
-                    key: "unlock",
-                    value: function unlock() {
-                        this.interceptors.request.unlock();
-                    }
                 }]);
 
                 return Fly;
@@ -670,20 +703,24 @@
 
             ["get", "post", "put", "patch", "head", "delete"].forEach(function (e) {
                 Fly.prototype[e] = function (url, data, option) {
-                    return this.request(url, data, utils.merge({method: e}, option));
+                    return this.request(url, data, utils.merge({ method: e }, option));
+                };
+            });
+            ["lock", "unlock", "clear"].forEach(function (e) {
+                Fly.prototype[e] = function () {
+                    this.interceptors.request[e]();
                 };
             });
 // Learn more about keep-loader: https://github.com/wendux/keep-loader
             ;
             module.exports = Fly;
 
-            /***/
-        }),
+            /***/ }),
         /* 3 */,
         /* 4 */,
         /* 5 */,
         /* 6 */
-        /***/ (function (module, exports, __webpack_require__) {
+        /***/ (function(module, exports, __webpack_require__) {
 
             "use strict";
 
@@ -714,14 +751,13 @@
                 wx.request(con);
             };
 
-            /***/
-        }),
+            /***/ }),
         /* 7 */,
         /* 8 */,
         /* 9 */,
         /* 10 */,
         /* 11 */
-        /***/ (function (module, exports, __webpack_require__) {
+        /***/ (function(module, exports, __webpack_require__) {
 
             "use strict";
 
