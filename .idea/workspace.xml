@@ -4,7 +4,6 @@
     <list default="true" id="34c9be96-7d11-4d00-8749-8f8bd634ecf9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/grace.js" afterPath="$PROJECT_DIR$/dist/grace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/http.js" afterPath="$PROJECT_DIR$/src/http.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,7 +21,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
+            <state relative-caret-position="445">
               <caret line="0" column="14488" lean-forward="false" selection-start-line="0" selection-start-column="14488" selection-end-line="0" selection-end-column="14488" />
               <folding />
             </state>
@@ -42,8 +41,8 @@
       <file leaf-file-name="http.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/http.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="775" column="3" lean-forward="false" selection-start-line="775" selection-start-column="3" selection-end-line="775" selection-end-column="3" />
+            <state relative-caret-position="505">
+              <caret line="793" column="3" lean-forward="false" selection-start-line="793" selection-start-column="3" selection-end-line="793" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -82,8 +81,8 @@
       <file leaf-file-name="grace.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/grace.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="0" column="14434" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14488" />
+            <state relative-caret-position="0">
+              <caret line="0" column="14521" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14575" />
               <folding />
             </state>
           </provider>
@@ -145,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/bind.js" />
         <option value="$PROJECT_DIR$/src/mixin.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/http.js" />
         <option value="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
+        <option value="$PROJECT_DIR$/src/http.js" />
       </list>
     </option>
   </component>
@@ -167,8 +166,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="198" />
-    <option name="y" value="73" />
+    <option name="x" value="250" />
+    <option name="y" value="23" />
     <option name="width" value="1098" />
     <option name="height" value="808" />
   </component>
@@ -189,7 +188,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,49 +203,13 @@
             <path>
               <item name="grace" type="b2602c69:ProjectViewProjectNode" />
               <item name="grace" type="462c0819:PsiDirectoryNode" />
-              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grace" type="462c0819:PsiDirectoryNode" />
-              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="grace" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grace" type="462c0819:PsiDirectoryNode" />
-              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grace" type="462c0819:PsiDirectoryNode" />
-              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grace" type="462c0819:PsiDirectoryNode" />
-              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grace" type="462c0819:PsiDirectoryNode" />
-              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,7 +273,9 @@
       <workItem from="1523617584180" duration="754000" />
       <workItem from="1523686152513" duration="159000" />
       <workItem from="1524198073234" duration="668000" />
-      <workItem from="1531530317563" duration="270000" />
+      <workItem from="1531530317563" duration="696000" />
+      <workItem from="1531550793949" duration="2000" />
+      <workItem from="1539249745292" duration="534000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加事件总线&#10;2.支持跨页面传值">
       <created>1520322061888</created>
@@ -516,23 +480,30 @@
       <option name="project" value="LOCAL" />
       <updated>1524198140963</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update http module">
+      <created>1531530621180</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1531530621180</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31177000" />
+    <option name="totallyTimeSpent" value="32139000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="198" y="73" width="1098" height="808" extended-state="0" />
+    <frame x="250" y="23" width="1098" height="808" extended-state="0" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4318182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44886363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50869566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25507247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -822,7 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -837,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,26 +858,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="775" column="3" lean-forward="false" selection-start-line="775" selection-start-column="3" selection-end-line="775" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/grace.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="0" column="14434" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14488" />
+        <state relative-caret-position="0">
+          <caret line="0" column="14521" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14575" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
+        <state relative-caret-position="445">
           <caret line="0" column="14488" lean-forward="false" selection-start-line="0" selection-start-column="14488" selection-end-line="0" selection-end-column="14488" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="793" column="3" lean-forward="false" selection-start-line="793" selection-start-column="3" selection-end-line="793" selection-end-column="3" />
           <folding />
         </state>
       </provider>
