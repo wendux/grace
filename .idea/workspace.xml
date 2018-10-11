@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34c9be96-7d11-4d00-8749-8f8bd634ecf9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/grace.js" afterPath="$PROJECT_DIR$/dist/grace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/http.js" afterPath="$PROJECT_DIR$/src/http.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" afterPath="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="0" column="14488" lean-forward="false" selection-start-line="0" selection-start-column="14488" selection-end-line="0" selection-end-column="14488" />
+            <state relative-caret-position="380">
+              <caret line="0" column="14575" lean-forward="false" selection-start-line="0" selection-start-column="14575" selection-end-line="0" selection-end-column="14575" />
               <folding />
             </state>
           </provider>
@@ -81,14 +80,14 @@
       <file leaf-file-name="grace.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/grace.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="14521" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14575" />
+            <state relative-caret-position="377">
+              <caret line="0" column="14564" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14575" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -144,8 +143,8 @@
         <option value="$PROJECT_DIR$/src/bind.js" />
         <option value="$PROJECT_DIR$/src/mixin.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
         <option value="$PROJECT_DIR$/src/http.js" />
+        <option value="$PROJECT_DIR$/quickstart-grace-demo/grace/index.js" />
       </list>
     </option>
   </component>
@@ -199,6 +198,17 @@
               <item name="grace" type="b2602c69:ProjectViewProjectNode" />
               <item name="grace" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grace" type="462c0819:PsiDirectoryNode" />
+              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grace" type="462c0819:PsiDirectoryNode" />
+              <item name="quickstart-grace-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="grace" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="grace" type="b2602c69:ProjectViewProjectNode" />
@@ -275,7 +285,7 @@
       <workItem from="1524198073234" duration="668000" />
       <workItem from="1531530317563" duration="696000" />
       <workItem from="1531550793949" duration="2000" />
-      <workItem from="1539249745292" duration="534000" />
+      <workItem from="1539249745292" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加事件总线&#10;2.支持跨页面传值">
       <created>1520322061888</created>
@@ -487,11 +497,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531530621180</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="更新网络请求模块">
+      <created>1539250307661</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1539250307661</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32139000" />
+    <option name="totallyTimeSpent" value="32196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="250" y="23" width="1098" height="808" extended-state="0" />
@@ -533,7 +550,8 @@
     <MESSAGE value="fix #14" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="update http module" />
-    <option name="LAST_COMMIT_MESSAGE" value="update http module" />
+    <MESSAGE value="更新网络请求模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新网络请求模块" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -858,22 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/grace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14521" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14575" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="0" column="14488" lean-forward="false" selection-start-line="0" selection-start-column="14488" selection-end-line="0" selection-end-column="14488" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/http.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
@@ -886,6 +888,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/grace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="0" column="14564" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14575" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart-grace-demo/grace/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="0" column="14575" lean-forward="false" selection-start-line="0" selection-start-column="14575" selection-end-line="0" selection-end-column="14575" />
           <folding />
         </state>
       </provider>
