@@ -402,7 +402,7 @@ grace.page({
    import grace from "../grace/index.js"
    var page=grace.page;
    grace.page=function(ob){
-     mixin(ob,{
+     grace.mixin(ob,{
        onLoad(){
         //页面调用onShow时打印出当前页面id 
         console.log("onLoad, pageID:"+this.$id)
